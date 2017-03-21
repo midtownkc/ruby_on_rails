@@ -36,7 +36,6 @@ class Solution
 
   def initialize
     @analyzers = []
-    @highest_count_words_across_lines = []
   #comment this off and on to print values in file
     #self.analyze_file
   end
@@ -62,6 +61,7 @@ class Solution
 
   #  highest_count_words_across_lines attribute values
   def highest_count_words_across_lines
+
     ##code that returns objects
     wf_count = 0
     highest = []
@@ -70,13 +70,11 @@ class Solution
         wf_count = analyze.highest_wf_count
       else
       end
-      puts wf_count
       @highest_count_across_lines = wf_count
       if analyze.highest_wf_count == wf_count
         highest.push(analyze)
       else
       end
-    puts highest
     @highest_count_words_across_lines = highest
     end
 
@@ -89,8 +87,7 @@ class Solution
     # max_words.map { |k, v| [ words.push(k), @highest_count_across_lines = v ] }
     #
     # @highest_count_words_across_lines = words.flatten
-    #* identifies the LineAnalyzer objects in the analyzers array that have highest_wf_count equal to highest_count_across_lines
-    #  attribute value determined previously and stores them in highest_count_words_across_lines.
+
   end
 
     #* print_highest_word_frequency_across_lines() - prints the values of LineAnalyzer objects in
@@ -104,6 +101,6 @@ class Solution
   end
 end
 
-getIt = Solution.new
-getIt.analyze_file
-getIt.print_highest_word_frequency_across_lines
+# getIt = Solution.new
+# getIt.analyze_file
+# getIt.print_highest_word_frequency_across_lines
