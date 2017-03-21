@@ -47,15 +47,6 @@ class Solution
 
 #* calculate_line_with_highest_frequency() - determines the highest_count_across_lines
   def calculate_line_with_highest_frequency
-  #   counts = []
-  #   @analyzers.each { |a| counts.push(a.highest_wf_count.to_i) }
-  #   @highest_count_across_lines = counts.sort[-1]
-  # end
-  #
-  # #  highest_count_words_across_lines attribute values
-  # def highest_count_words_across_lines
-
-    ##code that returns objects
     wf_count = 0
     highest = []
     @analyzers.each do |analyze|
@@ -71,16 +62,6 @@ class Solution
     @highest_count_words_across_lines = highest.flatten
     end
 
-    ##Code which returns array
-    # outcome = Hash.new
-    # words = []
-    # broke_words = []
-    # @analyzers.each { |a| outcome[a.highest_wf_words] = a.highest_wf_count }
-    # max_words = outcome.select { |k, v| v == outcome.values.max }
-    # max_words.map { |k, v| [ words.push(k), @highest_count_across_lines = v ] }
-    #
-    # @highest_count_words_across_lines = words.flatten
-
   end
 
     #* print_highest_word_frequency_across_lines() - prints the values of LineAnalyzer objects in
@@ -89,7 +70,5 @@ class Solution
     self.highest_count_words_across_lines()
     puts "The following words have the highest word frequency per line: "
     @highest_count_words_across_lines.each {|item| puts "#{item.highest_wf_words} (appears on line ##{item.line_number})"}
-      #Implement the print_highest_word_frequency_across_lines() method to
-      #* print the values of objects in highest_count_words_across_lines in the specified format
   end
 end
