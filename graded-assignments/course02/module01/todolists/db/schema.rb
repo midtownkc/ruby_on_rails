@@ -11,22 +11,38 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170328192212) do
+ActiveRecord::Schema.define(version: 20170329152503) do
 
-  create_table "cars", force: :cascade do |t|
-    t.string   "company"
-    t.string   "color"
-    t.integer  "year"
-    t.datetime "created_at",                          null: false
-    t.datetime "updated_at",                          null: false
-    t.decimal  "price",      precision: 10, scale: 2
-  end
-
-  create_table "people", force: :cascade do |t|
+  create_table "profiles", force: :cascade do |t|
+    t.string   "gender"
+    t.integer  "birth_year"
     t.string   "first_name"
     t.string   "last_name"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+  end
+
+  create_table "todo_items", force: :cascade do |t|
+    t.date     "due_date"
+    t.string   "title"
+    t.text     "description"
+    t.boolean  "completed"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "todo_lists", force: :cascade do |t|
+    t.string   "list_name"
+    t.date     "list_due_date"
+    t.datetime "created_at",    null: false
+    t.datetime "updated_at",    null: false
+  end
+
+  create_table "users", force: :cascade do |t|
+    t.string   "username"
+    t.string   "password_digest"
+    t.datetime "created_at",      null: false
+    t.datetime "updated_at",      null: false
   end
 
 end
