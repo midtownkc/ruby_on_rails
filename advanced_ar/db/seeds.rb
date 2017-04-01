@@ -30,3 +30,7 @@ Person.last.jobs.create! [
   { title: "Sr. Developer", company: "MS", position_id: "#5234" },
   { title: "Sr. Developer", company: "MS", position_id: "#5235" }
 ]
+
+# Person.personal_info.create! [
+#   { height: weight:  }
+# ]
