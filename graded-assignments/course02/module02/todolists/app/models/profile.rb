@@ -1,6 +1,6 @@
 class Profile < ActiveRecord::Base
   belongs_to :user
-
+  
   validate :first_name_or_last_name
   validate :male_or_female
   validate :boy_sue
